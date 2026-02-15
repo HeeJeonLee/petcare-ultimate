@@ -1,0 +1,27 @@
+{
+  "name": "PetCare+ 펫케어플러스",
+  "short_name": "PetCare+",
+  "description": "미래에셋금융서비스 펫보험 5사 비교 + AI 상담",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#667eea",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["finance", "insurance", "lifestyle"],
+  "lang": "ko",
+  "dir": "ltr"
+}

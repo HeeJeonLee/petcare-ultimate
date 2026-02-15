@@ -1,0 +1,57 @@
+.app {
+  min-height: 100vh;
+}
+
+/* PWA 설치 배너 */
+.install-banner {
+  position: fixed;
+  bottom: 80px;
+  left: 0;
+  right: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  padding: 16px;
+  box-shadow: 0 -4px 20px rgba(0,0,0,0.2);
+  z-index: 998;
+  animation: slideUp 0.5s;
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+
+.install-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.btn-install {
+  background: white;
+  color: #667eea;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn-install:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 768px) {
+  .install-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}

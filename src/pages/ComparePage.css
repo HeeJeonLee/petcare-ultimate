@@ -1,0 +1,252 @@
+.compare-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  padding-bottom: 80px;
+}
+
+/* 로딩 상태 */
+.loading-state {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading-content {
+  text-align: center;
+  color: white;
+}
+
+.loading-spinner-large {
+  width: 60px;
+  height: 60px;
+  border: 5px solid rgba(255, 255, 255, 0.3);
+  border-top: 5px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 30px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-content h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.loading-content p {
+  font-size: 16px;
+  opacity: 0.9;
+}
+
+/* 헤더 */
+.compare-header {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.back-btn {
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+.back-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.compare-header h1 {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* 컨텐츠 */
+.compare-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.compare-info {
+  text-align: center;
+  color: white;
+  margin-bottom: 40px;
+}
+
+.compare-info h2 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.compare-info p {
+  font-size: 18px;
+  opacity: 0.95;
+}
+
+/* 보험 카드 그리드 */
+.insurance-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+.insurance-card {
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+  border: 3px solid transparent;
+}
+
+.insurance-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2);
+}
+
+.insurance-card.selected {
+  border-color: #667eea;
+  box-shadow: 0 12px 40px rgba(102, 126, 234, 0.3);
+}
+
+/* 배지 */
+.badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  padding: 6px 14px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+  color: white;
+}
+
+.badge-best {
+  background: #f59e0b;
+}
+
+.badge-popular {
+  background: #10b981;
+}
+
+.badge-recommend {
+  background: #667eea;
+}
+
+/* 보험 정보 */
+.insurance-header {
+  margin-bottom: 20px;
+}
+
+.company-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 4px;
+}
+
+.product-name {
+  font-size: 14px;
+  color: #666;
+}
+
+.price-section {
+  margin-bottom: 20px;
+  padding: 16px;
+  background: #f8f9ff;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.price {
+  font-size: 28px;
+  font-weight: 900;
+  color: #667eea;
+  margin-bottom: 4px;
+}
+
+.price-label {
+  font-size: 14px;
+  color: #666;
+}
+
+.features-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.features-list li {
+  padding: 8px 0;
+  font-size: 14px;
+  color: #555;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.features-list li:last-child {
+  border-bottom: none;
+}
+
+.selected-badge {
+  margin-top: 16px;
+  padding: 12px;
+  background: #667eea;
+  color: white;
+  text-align: center;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* 액션 섹션 */
+.action-section {
+  text-align: center;
+}
+
+.action-section .btn {
+  min-width: 300px;
+}
+
+.action-section .btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Footer */
+.compare-footer {
+  background: rgba(0, 0, 0, 0.2);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.compare-footer .small {
+  font-size: 12px;
+  opacity: 0.8;
+  margin-top: 5px;
+}
+
+/* 반응형 */
+@media (max-width: 768px) {
+  .insurance-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .action-section .btn {
+    min-width: 100%;
+  }
+}
